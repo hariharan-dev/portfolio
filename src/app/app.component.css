@@ -1,4 +1,4 @@
-/* @media screen and (min-width: 701px) and (max-width: 2100px){
+@media screen and (min-width: 701px) and (max-width: 2100px){
     @keyframes beat {
         0% {
             transform: scale(0);
@@ -8,6 +8,7 @@
         }
         100% {
             transform: scale(0);
+            display: none;
         }
     }
 }
@@ -22,11 +23,12 @@
         }
         100% {
             transform: scale(0);
+            display: none;
         }
     }
-} */
+}
 
-@keyframes beat {
+/* @keyframes beat {
     0% {
         transform: scale(0);
     }
@@ -35,8 +37,9 @@
     }
     100% {
         transform: scale(0);
+        display: none;
     }
-}
+} */
 
 .bg-container {
     display: block;
