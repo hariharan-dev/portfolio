@@ -1,0 +1,99 @@
+/* @media screen and (min-width: 701px) and (max-width: 2100px){
+    @keyframes beat {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    @keyframes beat {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(0.5);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+} */
+
+@keyframes beat {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.bg-container {
+    display: block;
+    height: 98vh;
+    width: 100%;
+    margin: 0px;
+    background: white;
+    overflow: hidden;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    animation: beat 3s ease-in-out forwards infinite;
+    animation-fill-mode: both;
+    left: 0px;
+    top: 0px;
+}
+
+.left-heart,
+.right-heart {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: green;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+.right-heart {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+body{
+    overflow: hidden;
+}
