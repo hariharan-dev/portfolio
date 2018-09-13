@@ -1,0 +1,60 @@
+.nav {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+        .tags{
+            display: flex;
+            flex-direction: column;
+            padding: 0 2%;
+            font-size: 1.5em;
+            font-weight: bold;
+            width: fit-content;
+            .line{
+                position: relative;
+                width: 0%;
+                height: 2px;
+                background: gold;
+                &::before{
+                    position: absolute;
+                    width: 14%;
+                    right: -1px;
+                    top: -2px;
+                    height: 5px;
+                    content: '';
+                    border-radius: 50%;
+                    background-image: linear-gradient(to right, gold , black);
+                }
+            }
+        }
+        .tags:hover > .line {
+            animation: flow 1s forwards ease-in;
+          }
+}
+.intro-wrapper {
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    h2{
+        text-align: center;
+        width: 100%;
+        margin: 0px auto;
+        color: black;
+        letter-spacing: 5px;
+        text-shadow: -1px -1px 0px black, 3px 3px 0px gold, 6px 6px 0px palegoldenrod;
+    }
+}
+
+@keyframes flow {
+    100%{
+        width: 100%;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  
+    .intro-wrapper {
+        font-size: 5em;
+    }
+}
