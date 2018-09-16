@@ -51,6 +51,7 @@
         border: 10px double $primary;
         border-bottom-style: unset;
         border-radius: 50%;
+        animation: head-shake 2s;
     }
 }
 .intro-wrapper {
@@ -114,6 +115,18 @@
 @keyframes glow {
     100%{
        transform: scale(1.3);
+    }
+}
+
+@keyframes head-shake {
+    25%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(30deg)
+    }
+    100%{
+        transform: rotate(0deg);
     }
 }
 
