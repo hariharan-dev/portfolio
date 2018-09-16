@@ -1,4 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 export class Heart {
   top: number;
@@ -36,6 +37,16 @@ export class AppComponent implements OnInit {
     new Heart(),
     new Heart()
   ];
+
+  constructor(private router: Router) {
+    // GA page view tracker
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        (<any>window).ga('set', 'page', event.urlAfterRedirects);
+        (<any>window).ga('send', 'pageview');
+      }
+    });
+  }
 
   ngOnInit() {
     // starting animation after 1sec so that all hearts are initiated

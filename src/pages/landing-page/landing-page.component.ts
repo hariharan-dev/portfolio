@@ -11,4 +11,17 @@ export class LandingPageComponent  {
 
   }
 
+  /**
+   * Sends click event track to GA.
+   * @param eventLabel - Name of the contact medium clicked
+   */
+  sendEvent(eventLabel: string) {
+      (<any>window).ga('send', 'event', {
+        eventCategory: 'Social Media',
+        eventLabel: eventLabel,
+        eventAction: 'click',
+        eventValue: 10
+      });
+  }
+
 }
