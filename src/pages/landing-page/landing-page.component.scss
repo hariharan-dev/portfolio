@@ -48,8 +48,7 @@
     z-index: 1;
     position: relative;
     img{
-        border: 10px solid $primary;
-        border-style: double;
+        border: 10px double $primary;
         border-bottom-style: unset;
         border-radius: 50%;
     }
