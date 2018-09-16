@@ -33,10 +33,12 @@
     position: absolute;
     width: 100px;
     height: 90px;
-    animation: beat 3s ease-in-out forwards infinite;
+    animation: beat ease-in-out forwards infinite;
     animation-fill-mode: both;
+    animation-delay: 1s;
     left: 0px;
     top: 0px;
+    z-index: 0;
 }
 
 .left-heart,

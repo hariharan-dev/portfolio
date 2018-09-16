@@ -1,5 +1,5 @@
-    <div class="heart" [style.left.px]="heartLeft" [style.top.px]="heartTop">
-        <div class="left-heart" [style.background]="heartColor"></div>
-        <div class="right-heart" [style.background]="heartColor"></div>
+    <div *ngFor="let heart of hearts; let i = index" id="heart-{{i}}"  class="heart" [style.animation-duration]="heart.duration" [style.left.px]="heart.left" [style.top.px]="heart.top">
+        <div class="left-heart" [style.background]="heart.color"></div>
+        <div class="right-heart" [style.background]="heart.color"></div>
     </div>
     <router-outlet></router-outlet>
