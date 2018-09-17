@@ -52,6 +52,7 @@
         border-bottom-style: unset;
         border-radius: 50%;
         animation: head-shake 2s;
+        animation-delay: 0.5s;
     }
 }
 .intro-wrapper {
@@ -66,7 +67,7 @@
         margin: 0px auto;
         color: $primary;
         letter-spacing: 5px;
-        text-shadow: -1px -1px 0px $primary, 2px 2px 0px $secondary, 4px 4px 0px palegoldenrod;
+        text-shadow: -1px -1px 0px $primary, 2px 2px 0px $secondary, 4px 4px 0px orange;
     }
     p{
         margin: 0;
@@ -93,7 +94,7 @@
         padding: 0 2%;
         cursor: pointer;
         i:hover{
-            color: red;
+            color: $secondary;
             animation: glow 1s forwards;
         }
     }
@@ -132,11 +133,11 @@
 
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  
+@media (min-width: 768px) {  
     .intro-wrapper {
         font-size: 5em;
         h2{
-            text-shadow: -1px -1px 0px $primary, 3px 3px 0px $secondary, 6px 6px 0px palegoldenrod;
+            text-shadow: -1px -1px 0px $primary, 3px 3px 0px $secondary, 6px 6px 0px orange;
         }
     }
     .dp{

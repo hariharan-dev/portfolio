@@ -11,7 +11,7 @@ export class Heart {
   constructor() {
     this.top = getRandomInt(50, window.innerHeight - 120);
     this.left = getRandomInt(50, window.innerWidth - 120);
-    this.color = 'red';
+    this.color = 'lightsalmon';
     // this.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
     this.duration = Math.floor(Math.random() * 6000) + 3000;
   }
@@ -62,7 +62,7 @@ export class AppComponent implements OnInit {
           // stopping animation when tab is not active
           if (!document.hidden) {
             // desktop and up
-            if (window.innerWidth >= 992) {
+            if (window.innerWidth >= 768) {
               heart.top = getRandomInt(0, window.innerHeight - 120);
               heart.left = getRandomInt(0, window.innerWidth - 120);
             } else {
