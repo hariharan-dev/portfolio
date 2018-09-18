@@ -5,6 +5,11 @@
     color: $primary;
     position: relative;
 }
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
 .nav {
     padding: 1%;
     display: flex;
@@ -65,6 +70,7 @@
         text-align: center;
         width: 100%;
         margin: 0px auto;
+        font-size: 12vw;
         color: $primary;
         letter-spacing: 5px;
         text-shadow: -1px -1px 0px $primary, 2px 2px 0px $secondary, 4px 4px 0px orange;
@@ -132,11 +138,12 @@
 }
 
 
-// Large devices (desktops, 992px and up)
+// Large devices (tabs, 992px and up)
 @media (min-width: 768px) {  
     .intro-wrapper {
         font-size: 5em;
         h2{
+            font-size: 1em;
             text-shadow: -1px -1px 0px $primary, 3px 3px 0px $secondary, 6px 6px 0px orange;
         }
     }
@@ -156,5 +163,14 @@
     }
     .created-by{
         font-size: 1.5em;
+    }
+}
+
+// Large devices (tabs, 992px and up)
+@media (min-width: 992px) {
+    .intro-wrapper{
+        h2{
+            font-size: 1.5em;
+        }
     }
 }
