@@ -12,7 +12,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist",
-            "index": "src/index.html",
+            "index": "src/index.dev.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,7 @@
           },
           "configurations": {
             "production": {
+              "index": "src/index.html",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
